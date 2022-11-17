@@ -13,21 +13,20 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
-<<<<<<< HEAD
+
+        <%@ page import="java.util.Date, main.logic.TestClass" %>
+
         <%
-            for (int i = 0; i < 10; i++) {
-                out.println("<p>" + "Hello : " + i + "</p>");
-            }
-            out.println("Hello World!");
+            TestClass testClass = new TestClass();
         %>
 
-=======
-        <% java.util.Date now = new java.util.Date();
-        String someString = "Бягучая дата/Curent date: " + now;
-
+        <%=
+            testClass.getInfo()
         %>
-        <%= someString %>
->>>>>>> origin/master
+
+        <%=
+            new Date()
+        %>
     </p>
 
 </body>
