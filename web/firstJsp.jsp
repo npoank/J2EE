@@ -13,11 +13,13 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
-        <% java.util.Date now = new java.util.Date();
-        String someString = "Бягучая дата/Curent date: " + now;
-
+        <%
+            for (int i = 0; i < 10; i++) {
+                out.println("<p>" + "Hello : " + i + "</p>");
+            }
+            out.println("Hello World!");
         %>
-        <%= someString %>
+
     </p>
 
 </body>
